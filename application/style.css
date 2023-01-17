@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.functions-container{
+    height: 4.5rem;
+    width: 5rem;
+    background-color: #f5f6fa;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+img{
+    display: block;
+}
+.tools-container{
+    display: flex;
+    height: 4rem;
+    width: 50vw;
+    background-color: lightblue;
+    justify-content: space-around;
+    position: absolute;
+    top: 2rem;
+    left: 35rem;
+    background-color: #f5f6fa;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+
+}
+.scale-tools {
+    animation-name: scale-tools;
+    animation-duration: 1s;
+}
+@keyframes scale-tools {
+    0%{
+        transform: scale(0.1)
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.tools-container > * {
+    display: block;
+    width: 3rem;
+}
+
+.pen-customize-container{
+    height: 5.5rem;
+    width: 8.5rem;
+    background-color: #f5f6fa;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: absolute;
+    top: 6.5rem;
+    left: 35rem;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.pen-size-container{
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pen-size-container input{
+    width: 80%;
+}
+
+.pen-color-container{
+    height: calc(100% - 2.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+    
+}
+
+.pen-color {
+    width: 1.6rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin: 0.1rem;
+}
+
+.black{
+    background-color: black;
+}
+
+.red{
+    background-color: red;   
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.eraser-size-container{
+    height: 2.5rem;
+    width: 8.5rem;
+    background-color: #f5f6fa;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: absolute;
+    top: 6.5rem;
+    left: 44rem;
+    border-radius: 0.5rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.eraser-size-container input{
+    width: 80%;
+}
+
+.sticky-notes-container{
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    top: 15rem;
+    left: 10rem;
+    /* background-color: lightyellow; */
+}
+
+.sticky-notes-header-container{
+    height: 3rem;
+    /* background-color: yellow; */
+    background-color: #f5f6fa;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.sticky-notes-header-container > * {
+    height: 1.7rem;
+    width: 1.7rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+.minimize-note{
+    background-color: yellow;
+}
+
+.remove-note{
+    background-color: red;
+}
+.notes-text-container{
+    height: calc(100% - 2rem);
+    /* background-color: lightcoral; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+     
+}
+textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}

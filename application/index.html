@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Board</title>
+</head>
+<body>
+    <div class="functions-container">
+        <i class="fa-solid fa-bars-staggered"></i>
+    </div>
+    <div class="tools-container scale-tools">
+        <img class="pen" src="icons/pen.svg">
+        <img class="eraser" src="icons/eraser.svg">
+        <img class="undo" src="icons/undo.svg">
+        <img class="redo" src="icons/redo.svg">
+        <img class="sticky-note" src="icons/stickynotes.svg">
+        <img class="upload" src="icons/upload.svg">
+        <img class="download" src="icons/download.svg">
+        <!-- <img class="save" src="icons/save.jpeg"> -->
+    </div>
+
+    <div class="pen-customize-container">
+        <div class="pen-size-container">
+            <input class="pen-thickness" type="range" min="2" max="20" value="4">
+        </div>
+        <div class="pen-color-container">
+            <div class="red pen-color"></div>
+            <div class="blue pen-color"></div>
+            <div class="black pen-color"></div>
+            <div class="yellow pen-color"></div>
+            <div class="green pen-color"></div>
+        </div>
+    </div>
+    <div class="eraser-size-container">
+        <input class="eraser-thickness" type="range" min="2" max="40" value="6">
+    </div>
+
+    <!-- <div class="sticky-notes-container">
+    </div> -->
+    <canvas></canvas>
+    <script 
+        src="https://cdn.socket.io/4.5.3/socket.io.min.js" 
+        integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi" 
+        crossorigin="anonymous">
+    </script>
+    <script>
+        let socket = io.connect("http://localhost:2000");
+    </script>
+    <script src="./functionScript.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+</html>
